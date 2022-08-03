@@ -3,48 +3,11 @@ package com.company;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
 import java.util.function.BinaryOperator;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
 public class Chapter3Challenge1 {
-    static class Person {
-        public final String name;
-        public final Integer age;
-
-        public Person(String name, Integer age) {
-            this.name = name;
-            this.age = age;
-        }
-    }
-
-    static class Car {
-        public final String make;
-        public final String color;
-        public final Float price;
-
-        public Car(String make, String color, Float price) {
-            this.make = make;
-            this.color = color;
-            this.price = price;
-        }
-    }
-
-    static class Employee {
-        public final String name;
-        public final Integer age;
-        public final String jobTitle;
-        public final Float salary;
-
-        public Employee(String name, Integer age, String jobTitle, Float salary) {
-            this.name = name;
-            this.age = age;
-            this.jobTitle = jobTitle;
-            this.salary = salary;
-        }
-    }
-
     public static void main(String[] args) {
         Person[] peopleArr = {
                 new Person("Brandon", 23),
@@ -66,7 +29,7 @@ public class Chapter3Challenge1 {
 
         Car[] carsArr = {
                 new Car("Chevy", "red", 45000f),
-                new Car("Ford", "blue",23000f),
+                new Car("Ford", "blue", 23000f),
                 new Car("Toyota", "grey", 14000f),
                 new Car("Lamborghini", "blue", 150000f),
                 new Car("Renault", "blue", 150000f)
@@ -103,5 +66,41 @@ public class Chapter3Challenge1 {
                 .reduce(0f, sumSalaries);
 
         System.out.println("Sum of all the employees' salaries: " + sumAllSalaries);
+    }
+
+    static class Person {
+        public final String name;
+        public final Integer age;
+
+        public Person(String name, Integer age) {
+            this.name = name;
+            this.age = age;
+        }
+    }
+
+    static class Car {
+        public final String make;
+        public final String color;
+        public final Float price;
+
+        public Car(String make, String color, Float price) {
+            this.make = make;
+            this.color = color;
+            this.price = price;
+        }
+    }
+
+    static class Employee {
+        public final String name;
+        public final Integer age;
+        public final String jobTitle;
+        public final Float salary;
+
+        public Employee(String name, Integer age, String jobTitle, Float salary) {
+            this.name = name;
+            this.age = age;
+            this.jobTitle = jobTitle;
+            this.salary = salary;
+        }
     }
 }
